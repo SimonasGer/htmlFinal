@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+</head>
+<body style="margin-top: 250px;">
+    <header>
+        <nav class="navbar navbar-expand-sm fixed-top row" style="background-color: crimson;">
+            <div class="container-fluid mx-5">
+          <a class="navbar-brand text-white fw-bold" href="./home.html">Kelioniu gidas</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Nuorodos
+                </a>
+                <ul class="dropdown-menu" style="background-color: crimson;">
+                  <li><a class="dropdown-item text-white fw-bold" href="home.html#keliones">Kelioniu pasiulymai</a></li>
+                  <li><a class="dropdown-item text-white fw-bold" href="home.html#patarimai">Patarimai ir rekomendacijos</a></li>
+                  <li><a class="dropdown-item text-white fw-bold" href="home.html#auto">Autonuomos pasiūlymai</a></li>
+                  <li><a class="dropdown-item text-white fw-bold" href="home.html#zurnalas">Kelionių žurnalas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="./login.html">Log In</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="..." aria-label="Search">
+              <button class="btn btn-outline-secondary bg-white text-dark fw-bold" type="submit" style="margin-right: 100px;">Paieška</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <h1 class="text-center">Užklausa</h1>
+    <main  class="d-flex justify-content-center fw-bold text-center" >
+        <form method="submit" action="./home.html">
+            <fieldset class="col">
+                <label class="form-label" for="vardas">Vardas</label>
+                <input class="form-control" type="text" name="vardas" id="vardas" required/>
+            </fieldset>
+            <fieldset>
+                <label class="form-label" for="email">El. Paštas</label>
+                <input class="form-control" type="email" name="email" id="email" required/>
+            </fieldset>
+            <fieldset>
+                <label class="form-label" for="tel">Telefono numeris</label>
+                <input class="form-control" type="number" name="tel" id="tel" required/>
+            </fieldset>
+            <fieldset class="mb-m">
+                <label class="form-label">Pasirinkite miestą ir datą</label>
+                    <select class="form-control"  name="miestas" id="miestas-select">
+                        <optgroup label="miestas" required>
+                            <option value="klaipeda">Klaipėda</option>
+                            <option value="vilnius">Vilnius</option>
+                            <option value="kaunas">Kaunas</option>
+                        </optgroup>
+                        <optgroup class=""  label="miestas" required>
+                            <option value="klaipeda">Klaipėda</option>
+                            <option value="vilnius">Vilnius</option>
+                            <option value="kaunas">Kaunas</option>
+                        </optgroup>
+            </fieldset>
+            <fieldset class="m-1">
+                <label class="form-label" for="data">Data</label>
+                <input class="form-control" type="date" name="data" id="data" required/>
+            </fieldset>
+            <fieldset class="text-start form-label">
+                <legend class="text-center">Pasirinkite mėgstamą sportą</legend>
+            <div class="m-1">
+                <input type="checkbox" id="krepsinis" name="krepsinis"/>
+                <label for="krepsinis">Krepšinis</label>
+            </div>
+            <div class="m-1">
+                <input type="checkbox" id="futbolas" name="futbolas"/>
+                <label for="futbolas">Futbolas</label>
+            </div>
+            <div class="m-1">
+                <input type="checkbox" id="tinklinis" name="tinklinis"/>
+                <label for="tinklinis">Tinklinis</label>
+            </div>
+            <div class="m-1">
+                <input type="checkbox" id="regbis" name="regbis"/>
+                <label for="regbis">Regbis</label>
+            </div>
+            </fieldset>
+            <fieldset class="">
+                <legend>Pasirinkite vaisių</legend>
+              <div class="d-flex m-1">
+                <input type="radio" id="obuolys" name="vaisius" value="O" required/>
+                <label for="obuolys">Obuolys</label>
+              </div>
+                <div class="d-flex m-1">
+                  <input type="radio" id="kriause" name="vaisius" value="K"/>
+                <label for="kriause">Kriaušė</label>
+                </div>
+                <div class="d-flex m-1">
+                  <input type="radio" id="slyva" name="vaisius" value="S"/>
+                <label for="slyva">Slyva</label>
+                </div>
+                <div class="d-flex m-1">
+                  <input type="radio" id="apelsinas" name="vaisius" value="A"/>
+                <label for="apelsinas">Apelsinas</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label  class="form-label" for="tekstas">Įveskite tekstą</label>
+                <textarea class="form-control" name="tekstas" id="tekstas" cols="50" rows="10" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button class="btn text-white fw-bold m-2" type="submit" style="background-color: crimson;">Home</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="text-center text-lg-start text-white fw-bold" style="background-color: crimson">
+      <div class="container p-1 pb-0">
+        <section class="">
+          <div class="row">
+            <div class="col-md-2 col-lg-2 col-xl-2 mt-1">
+              <div>Mūsų adresas<address><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14092.755122760378!2d86.92497509999998!3d27.988120149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sD%C5%BEomolungma!5e0!3m2!1slt!2sht!4v1708522048221!5m2!1slt!2sht" width="200 sm-100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></address></div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <p class=" mb-4">Kontaktai</p>
+              <p><i class=" mr-3"></i> info@gmail.com</p>
+              <p><i class="mr-3"></i> + 3706123456</p>
+            </div>
+          </div>
+        </section>
+        <hr class="my-3">
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <div class="p-3">
+                © 2024: Simono Gerulio svetainė
+              </div>
+        </section>
+      </div>
+    </footer>
+</body>
+</html>
